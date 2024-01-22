@@ -1,4 +1,5 @@
 import cors from "cors";
+import morgan from "morgan";
 // import { rateLimit } from "express-rate-limit";
 import { json, urlencoded } from "express";
 
@@ -20,6 +21,7 @@ export function errorHandler(error, req, res, next) {
 export default function initMiddlewares(app) {
 	app.set("x-powered-by", false);
 	app.set("trust proxy", 1);
+	app.use(morgan("dev"));
 	app.use(cors());
 	// app.use(rateLimit({ max: 10 }));
 	app.use(json());
