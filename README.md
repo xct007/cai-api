@@ -2,10 +2,6 @@
 
 This is a simple API for a character AI. It is written in node.js and uses express.js for the server. The API provides endpoints for searching for characters, getting information about a character, and sending messages to a character AI.
 
-The API use playwright to interact with the character AI service. It sends requests to the character AI service and returns the responses to the client.
-
-The API is also documented using Swagger, so you can easily see the available endpoints and test them using the Swagger UI.
-
 ## Table of Contents
 
 - [Character AI API](#character-ai-api)
@@ -193,7 +189,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This project was created as part of a technical interview process. Thank you for the opportunity to work on this project.
 
-In the future, I would like to add more features to the API, such as user authentication and authorization, and more endpoints for interacting with the character AI service.
+The API is Reverse-Engineered from the character AI service. Do not hope many features are available in this API.
 
 If you have any questions or feedback, please feel free to reach out to me. I would love to hear from you!
 
