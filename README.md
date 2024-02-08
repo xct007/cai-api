@@ -20,33 +20,41 @@ The API is also documented using Swagger, so you can easily see the available en
   - [Testing](#testing)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
+  - [Live Demo](#live-demo)
 
 ## Prerequisites
 
 To run the API, you will need the following:
 
 - Node.js
-- npm
-- An access token for the character AI API (you can get this from the character AI service)
+  - This project was built using Node.js version 20.0.0. You can check your version of Node.js by running `node -v` in your terminal.
+- npm (Node Package Manager)
+  - You can install these by following the instructions on the [Node.js website](https://nodejs.org/).
+- An access token for the character AI API
+  - You can get this from the character AI service.
 
 ## Installation
 
 1. Clone the repository
 2. Run `npm install` in the root directory to install the dependencies
-3. Create a `.env` file in the root directory with the following content:
+   1. requires to install `@xct007/chrt-ai`
+3. Create a `.env` file in the root directory with the following content or rename the `.env.example` file to `.env` and fill in the values:
 
-```env
-ACCESS_TOKEN=your_access_token
-PORT=8080
-```
+   ```env
+   ACCESS_TOKEN=your_access_token
+   ID_TOKEN=your_id_token
+   PORT=8080
+   ```
 
-This will set the port for the server to 8080. You can change this to any port you want.
+   - `ACCESS_TOKEN`: This is the access token for the character AI service.
+   - `ID_TOKEN`: This is the id token for the character AI service.
+   - `PORT`: This will set the port for the server to `8080`. You can change this to any port you want. `default` is `3000` if not set.
+
+Note: requires to install playwright dependencies. Run `npx playwright install` to install the dependencies.
 
 ## Running the API
 
 To run the API, run `npm start` in the root directory. The API will be available at `localhost:8080`.
-
-Note: requires to install playwright dependencies. Run `npx playwright install` to install the dependencies.
 
 ## API Endpoints
 
@@ -58,7 +66,7 @@ The API provides the following endpoints:
 
 Returns a list of characters that match the search query. The search query should be sent as a `query` parameter in the URL.
 
-```curl
+```bash
 curl -X GET \
   'http://localhost:8080/api/search_character?query=yor' \
   -H 'Content-Type: application/json'
@@ -99,7 +107,7 @@ Response:
 
 Returns a list of all characters with their information. The character's external ID should be sent as a `external_id` parameter in the URL.
 
-```curl
+```bash
 curl -X GET \
   'http://localhost:8080/api/character_info?external_id=11' \
   -H 'accept: application/json'
@@ -137,7 +145,7 @@ Sends a message to the character AI. The message should be sent in the body of t
 
 The `external_id` is a unique identifier for the user sending the message. The `message` is the message to be sent to the character AI.
 
-```curl
+```bash
 curl -X POST \
   http://localhost:8080/api/send_message \
   -H 'Content-Type: application/json' \
@@ -188,3 +196,7 @@ This project was created as part of a technical interview process. Thank you for
 In the future, I would like to add more features to the API, such as user authentication and authorization, and more endpoints for interacting with the character AI service.
 
 If you have any questions or feedback, please feel free to reach out to me. I would love to hear from you!
+
+## Live Demo
+
+A live demo of the API is available at [https://apigratis.site/docs](https://apigratis.site/docs)
