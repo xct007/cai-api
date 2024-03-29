@@ -44,7 +44,7 @@ export async function characterInfo(req, res, next) {
  * @route POST /api/send_message
  */
 export async function sendMessage(req, res, next) {
-	const { external_id, message } = req.body;
+	const { external_id, message } = req.query;
 	if (!external_id || !message) {
 		const error = new Error(`Missing ${!external_id ? "external_id" : "text"}`);
 		error.status = 400;
