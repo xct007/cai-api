@@ -18,6 +18,7 @@ export async function searchCharacters(req, res, next) {
 	const json = await response.json();
 	res.json(json);
 }
+
 /**
  * @param {import("express").Request} req
  * @param {import("express").Response} res
@@ -36,6 +37,7 @@ export async function characterInfo(req, res, next) {
 	const json = await response.json();
 	res.json(json);
 }
+
 /**
  * @param {import("express").Request} req
  * @param {import("express").Response} res
@@ -57,6 +59,13 @@ export async function sendMessage(req, res, next) {
 	res.json(json);
 }
 
+/**
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @param {import("express").NextFunction} next
+ * @returns {void}
+ * @route GET /api/status
+ */
 export function statusCai(req, res, next) {
 	res.json({
 		status: true,
