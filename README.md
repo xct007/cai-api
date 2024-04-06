@@ -1,22 +1,26 @@
+## Note
+
+> We've migrated from Express.js to Fastify for improved performance and efficiency. This change won't affect the API's functionality. Please report any issues you encounter.
+
 # Character AI API
 
-This is a simple API for a character AI. It is written in node.js and uses express.js for the server. The API provides endpoints for searching for characters, getting information about a character, and sending messages to a character AI.
+This is a simple API for a character AI. The API provides endpoints for searching for characters, getting information about a character, and sending messages to a character AI.
 
 ## Table of Contents
 
 - [Character AI API](#character-ai-api)
-  - [Table of Contents](#table-of-contents)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Running the API](#running-the-api)
-  - [API Endpoints](#api-endpoints)
-    - [`GET /api/search_character`](#get-apisearch_character)
-    - [`GET /api/character_info`](#get-apicharacter_info)
-    - [`POST /api/send_message`](#post-apisend_message)
-  - [Testing](#testing)
-  - [License](#license)
-  - [Acknowledgments](#acknowledgments)
-  - [Live Demo](#live-demo)
+	- [Table of Contents](#table-of-contents)
+	- [Prerequisites](#prerequisites)
+	- [Installation](#installation)
+	- [Running the API](#running-the-api)
+	- [API Endpoints](#api-endpoints)
+		- [`GET /api/search_character`](#get-apisearch_character)
+		- [`GET /api/character_info`](#get-apicharacter_info)
+		- [`POST /api/send_message`](#post-apisend_message)
+	- [Testing](#testing)
+	- [License](#license)
+	- [Acknowledgments](#acknowledgments)
+	- [Live Demo](#live-demo)
 
 ## Prerequisites
 
