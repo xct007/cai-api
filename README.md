@@ -17,7 +17,7 @@ This is a simple API for a character AI. The API provides endpoints for searchin
 		- [`GET /api/search_character`](#get-apisearch_character)
 		- [`GET /api/character_info`](#get-apicharacter_info)
 		- [`POST /api/send_message`](#post-apisend_message)
-	- [Testing](#testing)
+	- [Test](#test)
 	- [License](#license)
 	- [Acknowledgments](#acknowledgments)
 	- [Live Demo](#live-demo)
@@ -54,11 +54,11 @@ Note: requires to install playwright dependencies. Run `npx playwright install` 
 
 ## Running the API
 
-To run the API, run `npm start` in the root directory. The API will be available at `localhost:8080`.
+To run the API, run `npm start` in the root directory. The API will be available at `localhost:PORT`.
 
 ## API Endpoints
 
-Swagger documentation is available at `http://localhost:8080/docs` after running the API.
+Swagger documentation is available at `/docs` after running the API.
 
 The API provides the following endpoints:
 
@@ -72,7 +72,8 @@ curl -X GET \
   -H 'Content-Type: application/json'
 ```
 
-Response:
+<details> 
+	<summary> Response </summary>
 
 ```json
 {
@@ -103,17 +104,20 @@ Response:
 }
 ```
 
+</details>
+
 ### `GET /api/character_info`
 
 Returns a list of all characters with their information. The character's external ID should be sent as a `external_id` parameter in the URL.
 
 ```bash
 curl -X GET \
-  'http://localhost:8080/api/character_info?external_id=11' \
+  'http://localhost:PORT/api/character_info?external_id=11' \
   -H 'accept: application/json'
 ```
 
-Response:
+<details> 
+	<summary> Response </summary>
 
 ```json
 {
@@ -132,6 +136,8 @@ Response:
 }
 ```
 
+</details>
+
 ### `POST /api/send_message`
 
 Sends a message to the character AI. The message should be sent in the body of the request as a JSON object with the following format:
@@ -147,7 +153,7 @@ The `external_id` is a unique identifier for the user sending the message. The `
 
 ```bash
 curl -X POST \
-  http://localhost:8080/api/send_message \
+  http://localhost:PORT/api/send_message \
   -H 'Content-Type: application/json' \
   -d '{
     "external_id": "1234",
@@ -155,7 +161,8 @@ curl -X POST \
 }'
 ```
 
-Response:
+<details> 
+	<summary> Response </summary>
 
 ```json
 {
@@ -181,9 +188,11 @@ Response:
 }
 ```
 
-## Testing
+</details>
 
-No tests have been written for this project. However, you can test the API using the provided endpoints. You can use a tool like Postman to send requests to the API and check the responses.
+## Test
+
+To run the tests, run `npm test` in the root directory.
 
 ## License
 
